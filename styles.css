@@ -84,24 +84,32 @@ body {
 
 .social-nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: var(--card-bg);
+    border-radius: 50%;
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 500;
+    font-size: 18px;
     transition: all 0.3s ease;
-    padding: 8px 12px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--card-border);
 }
 
 .social-icon:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: var(--text-primary);
-    transform: translateY(-2px);
+    background: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(4, 125, 96, 0.3);
+}
+
+.social-icon i {
+    font-size: 20px;
 }
 
 /* Hero Section */
@@ -1133,6 +1141,9 @@ h2::after {
 }
 
 .social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     color: var(--text-secondary);
     text-decoration: none;
     padding: 0.75rem 1.5rem;
@@ -1142,6 +1153,10 @@ h2::after {
     transition: all 0.3s ease;
 }
 
+.social-link i {
+    font-size: 18px;
+}
+
 .social-link:hover {
     background: var(--primary-color);
     color: var(--text-primary);
@@ -1149,18 +1164,14 @@ h2::after {
     box-shadow: 0 4px 15px rgba(4, 125, 96, 0.3);
 }
 
-/* Responsive Design for Certifications and Social Links */
+/* Responsive Design for Social Links */
 @media (max-width: 768px) {
-    .certifications ul {
-        grid-template-columns: 1fr;
-    }
-
     .social-icons {
         flex-direction: column;
     }
 
     .social-link {
         width: 100%;
-        text-align: center;
+        justify-content: center;
     }
 } 

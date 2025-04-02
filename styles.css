@@ -869,4 +869,298 @@ h2::after {
         width: 200px;
         height: 200px;
     }
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 250px;
+    background: var(--card-bg);
+    border-radius: 12px 0 0 12px;
+    padding: 1.5rem;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-left: 3px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+.sidebar:hover {
+    transform: translateY(-50%) translateX(-10px);
+}
+
+.sidebar-content h3 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.sidebar-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.sidebar-section {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-section h4 {
+    color: var(--text-primary);
+    font-size: 16px;
+    margin-bottom: 0.75rem;
+}
+
+.sidebar-links {
+    list-style: none;
+}
+
+.sidebar-links li {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+.sidebar-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Responsive Design for Sidebar */
+@media (max-width: 1200px) {
+    .sidebar {
+        position: static;
+        transform: none;
+        width: 100%;
+        border-radius: 12px;
+        margin: 2rem 0;
+        border-left: none;
+        border-top: 3px solid var(--primary-color);
+    }
+
+    .sidebar:hover {
+        transform: none;
+    }
+
+    .sidebar-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Info Panel Styles */
+.info-panel {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    background: var(--card-bg);
+    border-radius: 12px 0 0 12px;
+    padding: 1.5rem;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-left: 3px solid var(--primary-color);
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.info-panel:hover {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-5px);
+}
+
+.info-content h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin-bottom: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.info-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: var(--primary-color);
+}
+
+.info-section {
+    margin-bottom: 1.5rem;
+}
+
+.info-section h4 {
+    color: var(--text-primary);
+    font-size: 14px;
+    margin-bottom: 0.75rem;
+}
+
+.info-links {
+    list-style: none;
+}
+
+.info-links li {
+    margin-bottom: 0.5rem;
+}
+
+.info-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+.info-links a:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Responsive Design for Info Panel */
+@media (max-width: 1200px) {
+    .info-panel {
+        position: static;
+        transform: none;
+        width: 100%;
+        border-radius: 12px;
+        margin: 2rem 0;
+        border-left: none;
+        border-top: 3px solid var(--primary-color);
+        opacity: 1;
+    }
+
+    .info-panel:hover {
+        transform: none;
+    }
+
+    .info-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Certifications Section */
+.certifications {
+    margin-top: 3rem;
+    padding: 2rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    border: 1px solid var(--card-border);
+}
+
+.certifications h3 {
+    color: var(--text-primary);
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+.certifications ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.certifications li {
+    color: var(--text-secondary);
+    padding: 1rem;
+    background: var(--background-dark);
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.certifications li:hover {
+    background: var(--primary-color);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(4, 125, 96, 0.3);
+}
+
+/* Social Links in Contact Section */
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links h4 {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: 8px;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--primary-color);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(4, 125, 96, 0.3);
+}
+
+/* Responsive Design for Certifications and Social Links */
+@media (max-width: 768px) {
+    .certifications ul {
+        grid-template-columns: 1fr;
+    }
+
+    .social-icons {
+        flex-direction: column;
+    }
+
+    .social-link {
+        width: 100%;
+        text-align: center;
+    }
 } 
